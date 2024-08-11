@@ -44,15 +44,33 @@ span{
   /* float: left; */
 }
 .header-logo-li li{
-  margin-left: 44px;
+  margin-left: 30px;
   margin-top: 2px;
+  font-size: 14px;
+}
+#header-hyundai>a>img{
+  width: 180px;
+  height: 50px;
 }
 nav{
+  /* border: 1px solid black; */
   display: flex;
-  justify-content: space-between;
   margin-left: 250px;
   margin-right: 250px;
   width: 1000px;
+}
+#nav-ticketing{
+  color: red;
+}
+#nav-wrap{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  height: 44px;
+}
+#search{
+  margin-top: 7px;
 }
 /* ul clss="nav-menu" */
 .nav-menu{
@@ -67,19 +85,22 @@ nav{
 li:first-child{
   margin: 0;
 }
-/* li:last-child{
-  float: right;
-} */
+#search{
+  margin-right: 0;
+}
 .movie-dropdown{
   position: relative;
   display: inline-block; 
 }
+
+/* 여기부분이 드롭다운 전체를 감싸고 있는데
+nav에 들어 있는 margin때문에 화면을 양옆으로 다
+못 채워요... */
 /* #dropdown{
   border: 1px solid red;
-  display: flex;
-  width: 1000px;
-  height: 700px;
-  background-color: white;
+  margin: 0;
+  height: 400px;
+  width: 2000px;
 } */
 .dropdown-box{
   /* border: 1px solid black; */
@@ -102,10 +123,13 @@ li:first-child{
 .movie-dropdown:hover #dropdown{
   border: 1px solid red;
   display: flex;
-  margin: 15px;
+  margin: 0;
   width: 1000px;
   height: 400px;
   background-color: white;
+  /* 이거도 안먹히는 이유를 모르겠습니다 */
+  /* transition-delay: 250ms;
+  transition-property: margin-bottom; */
 }
 .dropdown-box>ul{
   list-style-type: none;
@@ -133,7 +157,16 @@ li:first-child{
   padding-top: 40px;
   padding-left: 20px;
   height: 70px;
-  width: 1000px;
+  width: 1000px
+}
+#movie-button{
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  height: 25px;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 670px;
 }
 #movie-text{
   opacity: 0.6;
@@ -143,7 +176,7 @@ li:first-child{
   
 }
 .movie-poster-box>a>img{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 0 10px 10px 20px;
   display: flex;
   width: 170px;
@@ -152,7 +185,7 @@ li:first-child{
   /* position: relative; */
 }
 .movie-name{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: block;
   font-size: 18px;
   text-align: center;
@@ -171,10 +204,34 @@ li:first-child{
   padding-top: 40px;
   padding-left: 20px;
   height: 70px;
-  width: 1000px;
+  width: 980px;
+  justify-content: space-between;
+}
+#event-button-stop{
+  border: 1px solid #e2e2e2;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+#event-button-all{
+  border: 1px solid #e2e2e2;
+  background-color: white;
+  border-radius: 10px;
+  height: 25px;
+  width: 100px;
 }
 #event-box-wrap{
   display: flex;
+}
+.event-box>a>div{
+  display: flex;
+  border: 1px solid black;
+  margin: 0 15px 0 15px;
+  height: 207px;
+  width: 310px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .event-box>a>img{
   display: flex;
@@ -197,7 +254,16 @@ li:first-child{
   padding-left: 15px;
   opacity: 0.6;
 }
-
+.event-box>a>div>img:hover{
+  /* height: 237px;
+  width: 340px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out; */
+  /* 이미지 크기 */
+  transform: scale(1.1);
+  /* 효과 */
+  transition: transform 0.3s ease;
+}
 
 .cinema{
   border: 1px solid black;
@@ -211,30 +277,52 @@ li:first-child{
   padding-top: 40px;
   padding-left: 20px;
   height: 50px;
-  width: 1000px;
+  width: 980px;
+  justify-content: space-between;
+}
+#cinema-button{
+  background-color: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  height: 25px;
+  width: 100px;
 }
 .cinema-wrap{
   display: flex;
   justify-content: space-between;
 }
-#cinema-box{
+#cinema-box>a>img{
   border: 1px solid black;
   margin: 0 5px 0 20px;
   width: 500px;
   height: 260px;
   border-radius: 10px;
 }
-/* #cinema-ul{
-  border: 1px solid black;
-  width: 500px;
-  height: 260px;
-} */
 .cinema-li{
   border: 1px solid black;
   width: 450px;
   height: 60px;
   list-style: none;
   border-radius: 10px;
+  z-index: 1;
+}
+.cinema-li{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 8px;
+}
+.cinema-li-span{
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 8px;
+}
+.cinema-li-hashtag{
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  margin-top: 20px;
+  margin-right: 5px;
+  height: 10px;
+  font-size: 14px;
 }
 
 #package{
@@ -245,7 +333,7 @@ li:first-child{
   display: flex;
 }
 .package-wrap{
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   width: 270px;
   height: 370px;
   margin: auto;
@@ -256,12 +344,21 @@ li:first-child{
   height: 40px;
   display: flex;
   font-size: 20px;
-  margin: 0;
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-left: 17px;
   justify-content: space-between;
 }
+#package-button{
+  background-color: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-top: 6px;
+  height: 20px;
+  font-size: 13px;
+}
 .package-box>a>img{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-bottom: 0;
   height: 100px;
   width: 270px;
@@ -276,7 +373,7 @@ li:first-child{
   display: flex;
 }
 #notice-01{
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   width: 450px;
   height: 200px;
   margin: 100px 0 100px 15px;
@@ -284,14 +381,14 @@ li:first-child{
   border-radius: 10px;
 }
 .notice-02{
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   width: 200px;
   height: 250px;
   margin: 100px 40px 100px 0;
   border-radius: 10px;
 }
 .notice-03{
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   width: 200px;
   height: 250px;
   margin: auto;
@@ -382,10 +479,10 @@ footer{
   width: 980px;
   height: 110px;
   display: flex;
+  justify-content: space-between;
 }
-#company-select{
-  margin-bottom: 0;
-  margin-right: 0;
+#company-select>select{
+  margin-top: 50px;
 }
 
 

@@ -15,7 +15,9 @@
         <span>DEEP DIVE SPACE</span>
       </div>
       <ul class="header-logo-li">
-        <li><span></span></li>
+        <div id="header-hyundai">
+          <a href="#"><img src="./img/log01.jpg"></a>
+        </div>
         <li><span><a href="#">로그인</a></span></li>
         <li><span><a href="#">회원가입</a></span></li>
         <li><span><a href="#">my cvg</a></span></li>
@@ -25,14 +27,19 @@
     <hr>
     <nav>
       <div class="movie-dropdown">
-        <ul class="nav-menu">
-          <li><a href="#">영화</a></li>
-          <li><a href="#">극장</a></li>
-          <li><a href="#">예매</a></li>
-          <li><a href="#">스토어</a></li>
-          <li><a href="#">이벤트</a></li>
-          <li><a href="#">혜택</a></li>
-        </ul>
+        <div id="nav-wrap">
+          <ul class="nav-menu">
+            <li><a href="#">영화</a></li>
+            <li><a href="#">극장</a></li>  
+            <li id="nav-ticketing"><a href="#">예매</a></li>
+            <li><a href="#">스토어</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">혜택</a></li>
+          </ul>
+          <div id="search">
+            <input type="text"><button type="submit">검색</button>
+          </div>
+        </div>
         <div id="dropdown">
           <div class="dropdown-box">
             <ul class="dropdown-content">
@@ -94,9 +101,9 @@
           </div>
         </div>
       </div>
-      <div id="search">
+      <!-- <div id="search">
         <input type="text"><button type="submit">검색</button>
-      </div>
+      </div> -->
     </nav>
   </header>
   <main>
@@ -108,6 +115,7 @@
         <div class="movie-wrap">
           <h2>무비차트</h2>
           <h2 id="movie-text">상영예정작</h2>
+          <button id="movie-button">전체보기 &gt;</button>
         </div>
         <div id="movie-poster">
           <div class="movie-poster-box">
@@ -147,19 +155,29 @@
     </div>
     <div class="event">
       <div id="event-line">
-        <h2>EVENT</h2>
+        <div>
+          <h2>EVENT</h2>
+        </div>
+        <div>
+          <button id="event-button-stop">||</button>
+          <button id="event-button-all">전체보기 &gt;</button>
+        </div>
       </div>
       <div id="event-box-wrap">
         <div class="event-box">
           <a href="#">
-            <img src="./img/event01.jpg">
+            <div class="event-box-img">
+              <img src="./img/event01.jpg">
+            </div>
             <strong class="event-strong">깊이 빠져 보다, CGV</strong>
             <p>2024.07.22~2024.08.18</p>
           </a>
         </div>
         <div class="event-box">
           <a href="#">
-            <img src="./img/event02.jpg">
+            <div class="event-box-img">
+              <img src="./img/event02.jpg">
+            </div>
             <strong class="event-strong">&lt;깊이 빠져 보다: ALBERT&gt;</strong>
             <p>2024.07.22~2024.08.18</p>
           </a>
@@ -167,8 +185,10 @@
         </div>
         <div class="event-box">
           <a href="#">
-            <img src="./img/event03.jpg">
-            <strong class="event-strong">서프라이즈 only</strong>
+            <div class="event-box-img">
+              <img src="./img/event03.jpg">
+            </div>
+            <strong class="event-strong">서프라이즈 only[도라에몽] 무료관람</strong>
             <p>2024.07.22~2024.08.18</p>
           </a>
         </div>
@@ -177,21 +197,45 @@
     <div class="cinema">
       <div id="cinema-line">
         <h2>특별관</h2>
+        <button id="cinema-button">전체보기 &gt;</button>
       </div>
       <div class="cinema-wrap">
-        <div id="cinema-box"></div>
+        <div id="cinema-box">
+          <a href="#"><img src="./img/cinema01.jpg"></a>
+        </div>
         <ul id="cinema-ul">
-          <li class="cinema-li"></li>
-          <li class="cinema-li"></li>
-          <li class="cinema-li"></li>
-          <li class="cinema-li"></li>
+          <li class="cinema-li">
+            <div class="cinema-li-span">
+              <span>SUITE CINEMA</span>
+            </div>
+            <div class="cinema-li-hashtag">#호텔 컵셉의 프리미엄관</div>
+          </li>
+          <li class="cinema-li">
+            <div class="cinema-li-span">
+              <span>CINE & LIVINGROOM</span>
+            </div>
+            <div class="cinema-li-hashtag">#신개념 소셜 상영관</div>
+          </li>
+          <li class="cinema-li">
+            <div class="cinema-li-span">
+              <span>4DX</span>
+            </div>
+            <div class="cinema-li-hashtag">#모션시트 #오감체험</div>
+          </li>
+          <li class="cinema-li">
+            <div class="cinema-li-span">
+              <span>CINE de CHEF</span>
+            </div>
+            <div class="cinema-li-hashtag">#쉐프가 있는 영화관</div>
+          </li>
         </ul>
       </div>
     </div>
     <div id="package">
       <div class="package-wrap">
         <div class="package-line">
-          패키지
+          <div>패키지</div>
+          <button id="package-button">더보기</button>
         </div>
         <div class="package-box">
           <a href="#"><img src="./img/package01.jpg"></a>
@@ -205,7 +249,8 @@
       </div>
       <div class="package-wrap">
         <div class="package-line">
-          영화관람권
+          <div>영화관람권</div>
+          <button id="package-button">더보기</button>
         </div>
         <div class="package-box">
           <a href="#"><img src="./img/m01.jpg"></a>
@@ -219,7 +264,8 @@
       </div>
       <div class="package-wrap">
         <div class="package-line">
-          기프트카드
+          <div>기프트카드</div>
+          <button id="package-button">더보기</button>
         </div>
         <div class="package-box">
           <a href="#"><img src="./img/g01.jpg"></a>
